@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        header {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #6d61f8;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #6d61f8;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            background-image: url('https://i.pinimg.com/564x/88/62/4c/88624c0331604fea59e68cbf4b3723cb.jpg');
+            font-family: 'Open Sans', sans-serif;
+            background-size: cover;
+            background-position: center;
+            color: rgb(17, 2, 2);
+            text-align: center;
+            padding: 100px 20px;
+            margin-top: 70px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        main {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .feature {
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #signup {
+            background-color: #033d95;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #signup button {
+            background-color: #ffffff;
+            color: #4085ce;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        #signup button:hover {
+            background-color: #f0f8ff;
+            color: #007bff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        form label {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #9354f9;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            margin-top: -15px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Mobile Launch Landing Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>The Final Launch</h1>
+    </header>
+
+    <nav>
+        <a href="#welcome">Home</a>
+        <a href="#features">Features</a>
+        <a href="#signup">Sign Up</a>
+    </nav>
+
+    <div class="hero" id="welcome">
+        <h1>Introducing the new model of EvRon!</h1>
+        <p>Experience innovation in the palm of your hands. Learn more about our cutting-edge mobile features.</p>
+    </div>
+
+    <main>
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="https://i.pinimg.com/236x/54/6a/45/546a45226994ee70583e4771bf5b0698.jpg" alt="Feature 1">
+                    <h3><b>Sleek Design</b></h3>
+                    <p>Beautifully crafted with a modern and ergonomic design.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://i.pinimg.com/236x/61/0f/e0/610fe0ba10b2f75f3c69989ce17f9b76.jpg" alt="Feature 2">
+                    <h3><b>Advanced Technology</b></h3>
+                    <p>Powered by state-of-the-art technology for a seamless experience.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://i.pinimg.com/236x/bb/68/fd/bb68fd29f931675b328004f86c98c46c.jpg" alt="Feature 3">
+                    <h3><b>Long-lasting Battery</b></h3>
+                    <p>Stay connected all day with our powerful and efficient battery.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup">
+            <h2>Stay Informed</h2>
+            <p>Be the first to know about updates, promotions, and exclusive offers. Sign up now!</p>
+            <form action="#" method="post" onsubmit="return validateForm()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message" id="name-error">Please enter your name</span>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error">Please enter a valid email address</span>
+
+                <button type="submit">Sign Up Now</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var isValid = true;
+
+            if (name === "") {
+                document.getElementById("name-error").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("name-error").style.display = "none";
+            }
+
+            if (email === "" || !isValidEmail(email)) {
+                document.getElementById("email-error").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("email-error").style.display = "none";
+            }
+
+            if (message === "") {
+                document.getElementById("message-error").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("message-error").style.display = "none";
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            // Basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
